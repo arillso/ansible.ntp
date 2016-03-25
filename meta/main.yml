@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  author: "René Moser"
+  author: "Simon Bärlocher"
   license: BSD
   min_ansible_version: 1.4
   platforms:

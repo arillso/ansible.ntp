@@ -1,39 +1,56 @@
-ntp
-===
+# Ansible Role: NTP
+[![Build Status](https://travis-ci.org/sbaerlocher/ansible.ntp.svg?branch=master)](https://travis-ci.org/sbaerlocher/ansible.ntp)
 
-[![Build Status](https://travis-ci.org/resmo/ansible-role-ntp.png?branch=master)](https://travis-ci.org/resmo/ansible-role-ntp)
+## Description
 
-This role enables users to install and configure ntp on their hosts.
+Ansible role for installing ntp on installs RHEL/CentOS or Debian/Ubuntu.
 
-Requirements
-------------
+## Installation
+
+```
+$ ansible-galaxy install sbaerlocher.redis
+```
+
+## Requirements
 
 This role requires Ansible 1.4 or higher, and platform requirements are listed
 in the metadata file.
 
-Examples
---------
+## Dependencies
+
+None
+
+## Example Playbook
 
 1) Install ntp and set the default settings.
 
-	- hosts: all
-	  roles:
-	    - role: ntp
+```yml
+    - hosts: all
+      roles:
+        - sbaerlocher.ntp
+```
 
 2) Install ntp and set some custom servers.
 
-	- hosts: all
-	  roles:
-	    - role: ntp
+```yml
+    - hosts: all
+      roles:
+        - sbaerlocher.ntp
 	      ntp_config_server: [2.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
+```
 
-License
--------
+## Changelog
+
+### 1.0
+
+* add my settings
+
+## Author
+
+* Benno Joy
+* René Moser
+* [Simon Bärlocher](https://sbaerlocher.ch)
+
+## License
 
 BSD
-
-Author Information
-------------------
-
-- Benno Joy
-- René Moser

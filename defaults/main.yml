@@ -1,7 +1,4 @@
 ---
-ntp_pkg_state: 'installed'
-ntp_service_state: 'started'
-ntp_service_enabled: 'yes'
 
 ntp_config_server: [ '0.pool.ntp.org', '1.pool.ntp.org', '2.pool.ntp.org', '3.pool.ntp.org' ]
 ntp_config_restrict:
