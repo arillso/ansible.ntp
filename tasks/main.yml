@@ -1,20 +1,21 @@
 ---
+# tasks file for sbaerlocher.ntp
 
 - name: add OS specific variables
   include_vars: "{{ item }}"
+  with_first_found:
+    - "vars/{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "vars/{{ ansible_distribution }}.yml"
+    - "vars/{{ ansible_os_family }}.yml"
+    - "vars/defaults.yml"
+
+- name: add OS specific task
+  include: "{{ item }}"
   with_first_found:
     - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
     - "{{ ansible_distribution }}.yml"
     - "{{ ansible_os_family }}.yml"
     - "defaults.yml"
-
-- name: install ntp on RedHat
-  yum: name=ntp state=latest
-  when: ansible_os_family == 'RedHat'
-
-- name: install ntp on Debian
-  apt: name=ntp state=latest
-  when: ansible_os_family == 'Debian'
 
 - name: copy config
   template: src=ntp.conf.j2 dest=/etc/ntp.conf

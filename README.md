@@ -45,6 +45,10 @@ None
 
 * add my settings
 
+### 1.1
+
+# add multiple os support
+
 ## Author
 
 * Benno Joy

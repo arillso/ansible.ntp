@@ -1,0 +1,6 @@
+---
+# tasks file for sbaerlocher.ntp
+
+- name: install ntp
+  yum: name=ntp state=latest
+  notify: enabled ntp
