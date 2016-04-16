@@ -1,6 +1,12 @@
 ---
-- name: add the OS specific variables
-  include_vars: '{{ ansible_os_family }}.yml'
+
+- name: add OS specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+    - "defaults.yml"
 
 - name: install ntp on RedHat
   yum: name=ntp state=latest
@@ -13,7 +19,5 @@
 - name: copy config
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   notify:
-  - restart ntp
-
-- name: enabled ntp service
-  service: name={{ ntp_service_name }} enabled=yes
+    - enabled ntp
+    - restart ntp
