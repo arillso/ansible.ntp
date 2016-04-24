@@ -47,7 +47,7 @@ None
 
 ### 1.1
 
-# add multiple os support
+* add multiple os support
 
 ## Author
 
