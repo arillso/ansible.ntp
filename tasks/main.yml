@@ -9,13 +9,9 @@
     - "vars/{{ ansible_os_family }}.yml"
     - "vars/defaults.yml"
 
-- name: add OS specific task
-  include: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-    - "{{ ansible_distribution }}.yml"
-    - "{{ ansible_os_family }}.yml"
-    - "defaults.yml"
+- name: install ntp
+  package: name={{ ntp_package_name }} state=latest
+  notify: enabled ntp
 
 - name: copy config
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
