@@ -13,12 +13,14 @@
     - packages
 
 - name: install ntp
+  become: true
   package: name={{ ntp_package_name }} state=latest
   notify: enabled ntp
   tags:
     - packages
 
 - name: copy config
+  become: true
   template: src=ntp.conf.j2 dest=/etc/ntp.conf
   notify:
     - enabled ntp
