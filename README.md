@@ -41,13 +41,17 @@ None
 
 ## Changelog
 
-### 1.0
+### 1.2
 
-* add my settings
+* add become
 
 ### 1.1
 
 * add multiple os support
+
+### 1.0
+
+* add my settings
 
 ## Author
 
