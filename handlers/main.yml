@@ -1,5 +1,5 @@
 ---
-# handlers file for sbaerlocher.ntp
+# handlers file for arillso.ntp
 
 - name: restart ntp
   become: true
