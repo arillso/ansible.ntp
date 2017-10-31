@@ -1,5 +1,5 @@
 ---
-# vars file for sbaerlocher.ntp
+# vars file for arillso.ntp
 
 ntp_service_name: ntp
 ntp_package_name: ntp

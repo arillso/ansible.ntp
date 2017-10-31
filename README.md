@@ -1,5 +1,5 @@
 # Ansible Role: NTP
-[![Build Status](https://travis-ci.org/sbaerlocher/ansible.ntp.svg?branch=master)](https://travis-ci.org/sbaerlocher/ansible.ntp)
+[![Build Status](https://travis-ci.org/arillso/ansible.ntp.svg?branch=master)](https://travis-ci.org/arillso/ansible.ntp)
 
 ## Description
 
@@ -8,7 +8,7 @@ Ansible role for installing ntp on installs RHEL/CentOS or Debian/Ubuntu.
 ## Installation
 
 ```
-$ ansible-galaxy install sbaerlocher.redis
+$ ansible-galaxy install arillso.redis
 ```
 
 ## Requirements
@@ -27,7 +27,7 @@ None
 ```yml
     - hosts: all
       roles:
-        - sbaerlocher.ntp
+        - arillso.ntp
 ```
 
 2) Install ntp and set some custom servers.
@@ -35,11 +35,15 @@ None
 ```yml
     - hosts: all
       roles:
-        - sbaerlocher.ntp
+        - arillso.ntp
 	      ntp_config_server: [2.ubuntu.pool.ntp.org, 1.ubuntu.pool.ntp.org]
 ```
 
 ## Changelog
+
+### 1.3
+
+* rename role name
 
 ### 1.2
 
