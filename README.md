@@ -41,6 +41,10 @@ None
 
 ## Changelog
 
+### 1.3
+
+* rename role name
+
 ### 1.2
 
 * add become
