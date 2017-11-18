@@ -3,8 +3,12 @@
 
 - name: restart ntp
   become: true
-  service: name={{ ntp_service_name }} state=restarted
+  service:
+    name: "{{ ntp_service_name }}"
+    state: restarted
 
 - name: enabled ntp
   become: true
-  service: name={{ ntp_service_name }} enabled=yes
+  service:
+    name: "{{ ntp_service_name }}"
+    enabled: yes
