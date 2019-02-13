@@ -1,14 +1,15 @@
 # Ansible Role: NTP
-[![Build Status](https://travis-ci.org/arillso/ansible.ntp.svg?branch=master)](https://travis-ci.org/arillso/ansible.ntp)
+
+[![Build Status](https://img.shields.io/travis/arillso/ansible.ntp.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.ntp) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ntp-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp) [![Ansible Role](https://img.shields.io/ansible/role/d/id.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp)
 
 ## Description
 
-Ansible role for installing ntp on installs RHEL/CentOS or Debian/Ubuntu.
+Ansible role for installing NTP on Linux and Windows.
 
 ## Installation
 
-```
-$ ansible-galaxy install arillso.redis
+```bash
+$ ansible-galaxy install arillso.ntp
 ```
 
 ## Requirements
@@ -40,6 +41,10 @@ None
 ```
 
 ## Changelog
+
+### 1.4.0
+
+* Support for Windows NTP Settings
 
 ### 1.3
 
