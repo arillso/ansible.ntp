@@ -11,4 +11,7 @@
   become: true
   service:
     name: "{{ ntp_service_name }}"
-    enabled: yes
+    enabled: true
+
+- name: update ntp config
+  win_shell: w32tm /config /update

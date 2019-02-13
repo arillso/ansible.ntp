@@ -2,31 +2,37 @@
 # tasks file for arillso.ntp
 
 - name: add OS specific variables
-  include_vars: "{{ item }}"
+  include_vars: "{{ loop_vars }}"
   with_first_found:
-    - "vars/{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-    - "vars/{{ ansible_distribution }}.yml"
-    - "vars/{{ ansible_os_family }}.yml"
-    - "vars/defaults.yml"
+    - files:
+        - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
+        - "{{ ansible_system }}.yml"
+        - "defaults.yml"
+      paths:
+        - "vars"
+  loop_control:
+    loop_var: loop_vars
   tags:
     - configuration
     - packages
 
-- name: install ntp
-  become: true
-  package:
-    name: "{{ ntp_package_name }}"
-  notify: enabled ntp
-  tags:
-    - packages
-
-- name: copy config
-  become: true
-  template:
-    src: ntp.conf.j2
-    dest: /etc/ntp.conf
-  notify:
-    - enabled ntp
-    - restart ntp
+- name: include distribution tasks
+  include_tasks: "{{ loop_distribution }}"
+  with_first_found:
+    - files:
+        - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
+        - "{{ ansible_system }}.yml"
+        - "defaults.yml"
+      paths:
+        - "distribution"
+  loop_control:
+    loop_var: loop_distribution
   tags:
     - configuration
+    - packages
