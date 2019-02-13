@@ -1,9 +1,10 @@
 ---
 
 galaxy_info:
-  author: "Simon Bärlocher"
+  author: arillso
+  description: Ansible role for installing NTP on Linux and Windows.
   license: BSD
-  min_ansible_version: 2
+  min_ansible_version: 2.7
   platforms:
     - name: EL
       versions:
@@ -23,6 +24,11 @@ galaxy_info:
     - name: Debian
       versions:
         - wheezy
-  categories:
+    - name: Windows
+      versions:
+        - all
+
+  galaxy_tags:
     - system
+
 dependencies: []
