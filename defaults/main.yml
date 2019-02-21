@@ -1,7 +1,7 @@
 ---
 # default file for arillso.ntp
 
-ntp_server: "{{ ntp_server_list | difference(ntp_server_empty) }}"
+ntp_server: '{{ ntp_server_list | difference(ntp_server_empty) }}'
 
 ntp_server_empty:
   - ''
@@ -38,8 +38,10 @@ ntp_config_broadcastclient: ''
 ntp_config_multicastclient: ''
 ntp_config_tinker_panic_enabled: ''
 
-ntp_crosssitesyncflags: "2"
-ntp_resolvepeerbackoffminutes: "15"
-ntp_resolvepeerbackoffmaxtimes: "7"
-ntp_specialpollinterval: "1024"
-ntp_eventlogflags: "0"
+ntp_GPO_enable: false
+ntp_time_type: 'NTP'
+ntp_crosssitesyncflags: '2'
+ntp_resolvepeerbackoffminutes: '15'
+ntp_resolvepeerbackoffmaxtimes: '7'
+ntp_specialpollinterval: '1024'
+ntp_eventlogflags: '0'
