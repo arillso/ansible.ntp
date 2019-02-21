@@ -1,6 +1,6 @@
 # Ansible Role: NTP
 
-[![Build Status](https://img.shields.io/travis/arillso/ansible.ntp.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.ntp) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ntp-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp) [![Ansible Role](https://img.shields.io/ansible/role/d/id.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp)
+[![Build Status](https://img.shields.io/travis/arillso/ansible.ntp.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.ntp) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ntp-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp) [![Ansible Role](https://img.shields.io/ansible/role/d/21608.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp)
 
 ## Description
 
