@@ -6,7 +6,7 @@ tinker panic 0
 
 driftfile {{ ntp_config_driftfile }}
 
-{% for server in ntp_server_list %}
+{% for server in ntp_server %}
 server {{ server }}
 {% endfor %}
 
