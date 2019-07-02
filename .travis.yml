@@ -9,8 +9,9 @@ env:
     - MOLECULE_DISTRO: centos7
     - MOLECULE_DISTRO: centos6
     - MOLECULE_DISTRO: ubuntu1804
-    - MOLECULE_DISTRO: ubuntu1604
     - MOLECULE_DISTRO: debian9
+    - MOLECULE_DISTRO: debian10
+    - MOLECULE_DISTRO: fedora29
 
 install:
   - pip install molecule docker
@@ -23,7 +24,6 @@ before_script:
   - cd arillso.$ROLE_NAME
 
 script:
-  # Run tests.
   - molecule test
 
 notifications:
