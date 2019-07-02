@@ -12,7 +12,7 @@ ntp_server:
 
 # Linux
 
-# Restrictions are used to control access to your ntpd
+# Restrictions are used to control access to your ntpd.
 ntp_config_restrict:
   - '-4 default kod notrap nomodify nopeer noquery'
   - '-6 default kod notrap nomodify nopeer noquery'
