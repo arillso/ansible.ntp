@@ -120,6 +120,7 @@ None
 
 - Updated Syntax, Code and Documentation
 - Fix More Server by Windows
+- molecule tests
 
 ### 1.4.0
 
