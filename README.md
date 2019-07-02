@@ -14,8 +14,7 @@ ansible-galaxy install arillso.ntp
 
 ## Requirements
 
-This role requires Ansible 2.7 or higher, and platform requirements are listed
-in the metadata file.
+This role require Ansible 2.7 or higher. The platform requirements are listed in the metadata file.
 
 ## Role Variables
 
@@ -35,7 +34,7 @@ ntp_server:
 
 #### Restrictions
 
-Restrictions are used to control access to your ntpd
+Restrictions are used to control access to your ntpd:
 
 ```yml
 ntp_config_restrict:
@@ -47,7 +46,7 @@ ntp_config_restrict:
 
 #### Listen
 
-Specifies to which interface ntp should be appended.
+Specifies to which interface NTP should be appended:
 
 ```yml
 ntp_config_listen: []
@@ -55,7 +54,7 @@ ntp_config_listen: []
 
 #### More
 
-Next ntp Configurrations details.
+NTP configurations details:
 
 ```yml
 ntp_config_filegen:
@@ -78,7 +77,7 @@ ntp_config_filegen:
 
 ### Windows
 
-Specifies whether the time server is configured via Windows GPO so that it is not permanently overwritten.
+Specifies if the time server is configured via Windows GPO so that it is not permanently overwritten.
 
 #### GPO
 
@@ -99,9 +98,9 @@ ntp_specialpollinterval: '1024'
 ntp_eventlogflags: '0'
 ```
 
-#### NTP Flag
+#### NTP Flags
 
-Possible NTP Falges that can be used under windows.
+Possible NTP flags that can be used under windows.
 0x01 SpecialInterval
 0x02 UseAsFallbackOnly
 0x04 SymmatricActive
@@ -119,7 +118,7 @@ None
 
 ### 1.4.1
 
-- Update Syntax, Code and Documentaion
+- Updated Syntax, Code and Documentation
 - Fix More Server by Windows
 
 ### 1.4.0
