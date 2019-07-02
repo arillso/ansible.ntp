@@ -4,7 +4,7 @@
 
 ## Description
 
-Ansible role for installing NTP on Linux and Windows.
+Ansible role for installing and configuring NTP on Linux and Windows.
 
 ## Installation
 
