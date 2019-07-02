@@ -54,7 +54,7 @@ ntp_resolvepeerbackoffmaxtimes: '7'
 ntp_specialpollinterval: '1024'
 ntp_eventlogflags: '0'
 
-# Possible NTP Falges that can be used under windows.
+# Possible NTP flags that can be used under windows.
 # 0x01    SpecialInterval
 # 0x02    UseAsFallbackOnly
 # 0x04    SymmatricActive
