@@ -1,6 +1,6 @@
 # Ansible Role: NTP
 
-[![Build Status](https://img.shields.io/travis/arillso/ansible.ntp.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.ntp) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://sbaerlo.ch/licence) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-ntp-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp) [![Ansible Role](https://img.shields.io/ansible/role/d/21608.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp)
+[![Build Status](https://img.shields.io/travis/arillso/ansible.ntp.svg?branch=master&style=popout-square)](https://travis-ci.org/arillso/ansible.ntp) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=popout-square)](https://sbaerlo.ch/licence) [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-ntp-blue.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp) [![Ansible Role](https://img.shields.io/ansible/role/d/21608.svg?style=popout-square)](https://galaxy.ansible.com/arillso/ntp)
 
 ## Description
 
@@ -113,30 +113,6 @@ ntp_flag: '0x01'
 ## Dependencies
 
 None
-
-## Changelog
-
-### 1.4.1
-
-- Updated Syntax, Code and Documentation
-- Fix More Server by Windows
-- molecule tests
-
-### 1.4.0
-
-- Support for Windows NTP Settings
-
-### 1.3
-
-- rename role name
-
-### 1.2
-
-- add become
-
-### 1.1
-
-- add multiple os support
 
 ### 1.0
 
