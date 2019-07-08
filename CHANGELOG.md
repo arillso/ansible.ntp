@@ -11,35 +11,35 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- Fix More Server by Windows
+- Fixed Problem solved that only one NTP server could be specified.
 
 ### Added
 
-- molecule tests
+- Molecule tests
 
 ## 1.4.0
 
 ### Added
 
-- Support for Windows NTP Settings
+- Support for Windows NTP settings
 
 ## 1.3
 
 ### Changed
 
-- rename role name
+- Rename role name
 
 ## 1.2
 
 ### Added
 
-- add become
+- Add become command
 
 ## 1.1.0
 
 ### Added
 
-- add multiple os support
+- Add multiple os support
 
 ## 1.0.0
 
