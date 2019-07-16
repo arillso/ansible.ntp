@@ -4,7 +4,7 @@
 
 ## Description
 
-The role configures and installs NTP under Linux and Windows. It is possible to specify multiple NTP servers for time synchronization. For Linux this is done via the NTP packet, for Windows it is set up via the local GPO the NTP synchronization.
+The role configures and installs NTP under Linux and Windows. It is possible to specify multiple NTP servers for time synchronization. For Linux this is done via the NTP package, for Windows it is set up via the local GPO for the NTP synchronization.
 
 ## Installation
 
