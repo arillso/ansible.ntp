@@ -11,7 +11,7 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
-- Fixed Problem solved that only one NTP server could be specified.
+- Fixed Problem that only one NTP server could be specified.
 
 ### Added
 
