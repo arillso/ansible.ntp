@@ -4,7 +4,7 @@
 - name: 'linux : install ntp'
   become: true
   package:
-    name: "{{ ntp_package_name }}"
+    name: '{{ ntp_package_name }}'
   notify: enabled ntp
   tags:
     - packages

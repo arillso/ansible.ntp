@@ -5,7 +5,7 @@
   win_regedit:
     path: HKLM:\Software\Policies\Microsoft\W32time\Parameters
     name: Type
-    data: "{{ ntp_time_type }}"
+    data: '{{ ntp_time_type }}'
     type: string
   when: not ntp_GPO_enable
   notify:
@@ -17,7 +17,7 @@
   win_regedit:
     path: HKLM:\Software\Policies\Microsoft\W32time\Parameters
     name: NtpServer
-    data: "{{ ntp_server[0] | default(ntp_server[0][0]) }}"
+    data: "{{ ntp_server | join(',' + ntp_flag + ' ') }}"
     type: string
   when: not ntp_GPO_enable
   notify:
@@ -28,21 +28,21 @@
 - name: 'windows : Sets NTP Client Settings'
   win_regedit:
     path: HKLM:\SOFTWARE\Policies\Microsoft\W32time\TimeProviders\NtpClient
-    name: "{{ item.name }}"
-    data: "{{ item.data }}"
+    name: '{{ item.name }}'
+    data: '{{ item.data }}'
     type: dword
   when: not ntp_GPO_enable
   with_items:
     - name: CrossSiteSyncFlags
-      data: "{{ ntp_crosssitesyncflags }}"
+      data: '{{ ntp_crosssitesyncflags }}'
     - name: ResolvePeerBackoffMinutes
-      data: "{{ ntp_resolvepeerbackoffminutes }}"
+      data: '{{ ntp_resolvepeerbackoffminutes }}'
     - name: ResolvePeerBackoffMaxTimes
-      data: "{{ ntp_resolvepeerbackoffmaxtimes }}"
+      data: '{{ ntp_resolvepeerbackoffmaxtimes }}'
     - name: SpecialPollInterval
-      data: "{{ ntp_specialpollinterval }}"
+      data: '{{ ntp_specialpollinterval }}'
     - name: EventLogFlags
-      data: "{{ ntp_eventlogflags }}"
+      data: '{{ ntp_eventlogflags }}'
   notify:
     - update ntp config
   tags:

@@ -4,13 +4,13 @@
 - name: restart ntp
   become: true
   service:
-    name: "{{ ntp_service_name }}"
+    name: '{{ ntp_service_name }}'
     state: restarted
 
 - name: enabled ntp
   become: true
   service:
-    name: "{{ ntp_service_name }}"
+    name: '{{ ntp_service_name }}'
     enabled: true
 
 - name: update ntp config
