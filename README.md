@@ -114,10 +114,6 @@ ntp_flag: '0x01'
 
 None
 
-### 1.0
-
-- add my settings
-
 ## Author
 
 - Benno Joy
