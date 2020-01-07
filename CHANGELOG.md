@@ -8,7 +8,7 @@ and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Update Readme
-- Fixed Metadata Score
+- Fixes to improve Metadata Score an Ansible Galaxy
 
 ## 1.4.1
 
