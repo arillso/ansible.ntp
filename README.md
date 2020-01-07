@@ -122,4 +122,8 @@ None
 
 ## License
 
-BSD
+This project is under the MIT License. See the [LICENSE](licence) file for the full license text.
+
+## Copyright
+
+(c) 2020, Arillso

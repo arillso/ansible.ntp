@@ -3,6 +3,13 @@
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 and [human-readable changelog](https://keepachangelog.com/en/1.0.0/).
 
+## 1.4.2
+
+### Changed
+
+- Update Readme
+- Fixes to improve Metadata Score an Ansible Galaxy
+
 ## 1.4.1
 
 ### Changed
